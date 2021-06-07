@@ -85,7 +85,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/06/05/hello-world/">Hello World</a>
+      <a class="p-name article-title" href="/2021/06/05/hello-world/">经验总结</a>
     </h1>
   
 
@@ -93,24 +93,16 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>g地方是分不开的数据备份肯定不是防空识别</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <p>第一次总结：事前没做整体的规划，导致问题出现难以解决；做事的时候不谨慎，导致出问题也不知道哪里出问题，尽可能知道原理。</p>
+<p>知识总结：su权限；端口开放问题的排查（最后发现问题在于未开启服务）；ufw使用；相关命令；git操作；naginx（<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/34943332">8分钟带你深入浅出搞懂Nginx - 知乎 (zhihu.com)</a>；yum和npm和apt，wget<a target="_blank" rel="noopener" href="https://www.cnblogs.com/lxwphp/p/11126255.html">wget、yum、rpm、apt-get区别 - 码农编程进阶笔记 - 博客园 (cnblogs.com)</a>；build-essential，若无gcc，在Linux里无法进行编译，很多语言编成的软件无法正常运行；Unable to locate package pcre换源update和upgrade，去官网下<a target="_blank" rel="noopener" href="https://linux.cn/article-9172-1.html">技术|详解如何用源代码安装软件，以及如何卸载它 (linux.cn)</a>，<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36090463/article/details/80646454">(27条消息) Linux系列之Linux安装及源配置（软件源）的介绍_阿武刚巴得-CSDN博客_linux安装源</a>；<a target="_blank" rel="noopener" href="https://www.cnblogs.com/qlqwjy/p/7787156.html">Linux中命令选项及参数简介 - QiaoZhi - 博客园 (cnblogs.com)</a>；<a target="_blank" rel="noopener" href="https://github.com/openssl/openssl/issues/11227%EF%BC%9Bufw%E5%BC%80%E5%90%AF%E7%AB%AF%E5%8F%A3%EF%BC%9B[nginx%E5%AE%89%E8%A3%85%E5%8F%8A%E5%85%B6%E9%85%8D%E7%BD%AE%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B">https://github.com/openssl/openssl/issues/11227；ufw开启端口；[nginx安装及其配置详细教程</a> - 知乎 (zhihu.com)](<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/83890573)%EF%BC%8C[(27%E6%9D%A1%E6%B6%88%E6%81%AF)">https://zhuanlan.zhihu.com/p/83890573)，[(27条消息)</a> Linux Nginx 配置/绑定域名_段占彪的博客-CSDN博客_linux nginx配置域名](<a target="_blank" rel="noopener" href="https://blog.csdn.net/github_38336924/article/details/82756779)%EF%BC%8C[(27%E6%9D%A1%E6%B6%88%E6%81%AF)">https://blog.csdn.net/github_38336924/article/details/82756779)，[(27条消息)</a> Nginx启动时提示nginx: <a target="_blank" rel="noopener" href="https://blog.csdn.net/sgdingye/article/details/99591422">emerg] still could not bind()_丁员外的破草屋-CSDN博客</a>；403关掉selinux</p>
+<p>第二次总结：解决问题时，一定要知道前提是什么，不要盲目地套用别人的经验；世上无难事，只要肯分析；问题解决的过程就是描述的过程，描述越精确解决越容易</p>
+<p>第三次总结：深度探索问题时必须找到原始资料</p>
+<p><a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">https://hexo.io/docs/one-command-deployment.html</a>)</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://1.117.216.4/2021/06/05/hello-world/" data-id="ckpl8q8400000n4vlcjap0fcj" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://1.117.216.4/2021/06/05/hello-world/" data-id="ckpl8q8400000n4vlcjap0fcj" data-title="经验总结" class="article-share-link">Share</a>
       
       
       
@@ -153,7 +145,7 @@
       <ul>
         
           <li>
-            <a href="/2021/06/05/hello-world/">Hello World</a>
+            <a href="/2021/06/05/hello-world/">经验总结</a>
           </li>
         
       </ul>
