@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="这是一篇关于测控基础的文章，大致讲述了测控的知识框架。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="电力测控基础">
+<meta property="og:url" content="http://example.com/2021/07/29/%E6%B5%8B%E6%8E%A7%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="曼路君的BLOG">
+<meta property="og:description" content="这是一篇关于测控基础的文章，大致讲述了测控的知识框架。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-07-28T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-07-29T14:13:19.790Z">
+<meta property="article:author" content="曼路君">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":6},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/2021/07/29/测控基础/"/>
+
+
+
+
+
+  <title>电力测控基础 | 曼路君的BLOG</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">曼路君的BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">积懒成笨，自律使人自由。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            Schedule
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/07/29/%E6%B5%8B%E6%8E%A7%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="曼路君的BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">电力测控基础</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-07-29T00:00:00+08:00">
+                2021-07-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%80%9D%E7%BB%B4%E6%A8%A1%E5%9E%8B/" itemprop="url" rel="index">
+                    <span itemprop="name">思维模型</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%80%9D%E7%BB%B4%E6%A8%A1%E5%9E%8B/%E5%AD%A6%E7%A7%91%E5%8E%9F%E7%90%86/" itemprop="url" rel="index">
+                    <span itemprop="name">学科原理</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%80%9D%E7%BB%B4%E6%A8%A1%E5%9E%8B/%E5%AD%A6%E7%A7%91%E5%8E%9F%E7%90%86/%E7%94%B5%E8%B7%AF%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index">
+                    <span itemprop="name">电路知识</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  这是一篇关于测控基础的文章，大致讲述了测控的知识框架。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="1-电压电流的计算"><a href="#1-电压电流的计算" class="headerlink" title="1.电压电流的计算"></a>1.电压电流的计算</h1><h3 id="1-1电压电流有效值的计算"><a href="#1-1电压电流有效值的计算" class="headerlink" title="1.1电压电流有效值的计算"></a>1.1电压电流有效值的计算</h3><h6 id="a-根据定义计算"><a href="#a-根据定义计算" class="headerlink" title="a.根据定义计算"></a>a.根据定义计算</h6><h6 id="b-线电压的计算："><a href="#b-线电压的计算：" class="headerlink" title="b.线电压的计算："></a>b.线电压的计算：</h6><p>在电压的计算中，线电压的计算比较特殊，因此单独拿出来计算。计算线电压有两种方法，一种可以看成是宏观的，一种可以看成是微观的。</p>
+<h6 id="c-计算过程中需要考虑的问题："><a href="#c-计算过程中需要考虑的问题：" class="headerlink" title="c.计算过程中需要考虑的问题："></a>c.计算过程中需要考虑的问题：</h6><ul>
+<li>去直流分量：由于信号在采集时会因为AD转换器以及硬件原因使采样点出现偏差，相当于在原始的采样信号上叠加了一个干扰信号，因此需要把它去掉。</li>
+<li>门槛的处理：在测控仪表中，有效值的测量精度和测量范围并不会无限量的缩小，有效值在接近零点时会受到硬件影响，使精度不能得到保证，再加上潜动实验的要求，有效值必须做门槛处理。</li>
+<li>电流1A/5A选型的处理。</li>
+</ul>
+<h1 id="2-功率的计算"><a href="#2-功率的计算" class="headerlink" title="2.功率的计算"></a>2.功率的计算</h1><blockquote>
+<p>首先，理解一下功率，功率就是单位时间内做功的多少，也即电能的转换速率。</p>
+<p>有功功率就是对外做功，电能转换为其他形式的功率。</p>
+<p>无功功率就是不对外做功，用来维持电磁场的交换。</p>
+<p>视在功率是有功功率和无功功率这两种功率的具体体现，当电路中只有阻性负载时有功功率就是视在功率。</p>
+</blockquote>
+<h3 id="2-1有功功率的计算"><a href="#2-1有功功率的计算" class="headerlink" title="2.1有功功率的计算"></a>2.1有功功率的计算</h3><h6 id="a-宏观计算"><a href="#a-宏观计算" class="headerlink" title="a.宏观计算"></a>a.宏观计算</h6><p>有角度。</p>
+<h6 id="b-微观计算"><a href="#b-微观计算" class="headerlink" title="b.微观计算"></a>b.微观计算</h6><h3 id="2-2无功功率的计算"><a href="#2-2无功功率的计算" class="headerlink" title="2.2无功功率的计算"></a>2.2无功功率的计算</h3><h6 id="a-定义计算："><a href="#a-定义计算：" class="headerlink" title="a.定义计算："></a>a.定义计算：</h6><p>普遍采用，因为有谐波存在所以有误差，但是允许误差。</p>
+<h6 id="b-间接计算："><a href="#b-间接计算：" class="headerlink" title="b.间接计算："></a>b.间接计算：</h6><p>无功功率没有符号。</p>
+<h6 id="c-计算过程中需要考虑的问题：-1"><a href="#c-计算过程中需要考虑的问题：-1" class="headerlink" title="c.计算过程中需要考虑的问题："></a>c.计算过程中需要考虑的问题：</h6><ul>
+<li>非正弦系统中的无功。</li>
+</ul>
+<h3 id="2-3视在功率的计算"><a href="#2-3视在功率的计算" class="headerlink" title="2.3视在功率的计算"></a>2.3视在功率的计算</h3><p>功率三角形法；功率定义法。</p>
+<h3 id="2-4三种功率的关系"><a href="#2-4三种功率的关系" class="headerlink" title="2.4三种功率的关系"></a>2.4三种功率的关系</h3><h6 id="2-4-1功率因数"><a href="#2-4-1功率因数" class="headerlink" title="2.4.1功率因数"></a>2.4.1功率因数</h6><p>IEC定义和IEEE定义</p>
+<h1 id="3-频率的测量"><a href="#3-频率的测量" class="headerlink" title="3.频率的测量"></a>3.频率的测量</h1><blockquote>
+<p>频率测量是其他量的前提，它决定了功率、功率因数、角度、谐波等的精度。</p>
+</blockquote>
+<h3 id="3-1硬件测频"><a href="#3-1硬件测频" class="headerlink" title="3.1硬件测频"></a>3.1硬件测频</h3><p>硬件测频方式，对于性能要求较高的装置均使用硬件测频。</p>
+<h3 id="3-2软件测频"><a href="#3-2软件测频" class="headerlink" title="3.2软件测频"></a>3.2软件测频</h3><p>软件测频方式，是通过 ADC 采集得到的电压离散值，比较两个过零点量之间的时间得出频率。</p>
+<h1 id="4-校准与补偿"><a href="#4-校准与补偿" class="headerlink" title="4.校准与补偿"></a>4.校准与补偿</h1><blockquote>
+<p>由于在实际测量中会引入各种各样的误差，使得测量值偏离实际值，因此对测量值进行精度补偿很重要。</p>
+</blockquote>
+<h3 id="4-1分段校准"><a href="#4-1分段校准" class="headerlink" title="4.1分段校准"></a>4.1分段校准</h3><h1 id="5-电能质量"><a href="#5-电能质量" class="headerlink" title="5.电能质量"></a>5.电能质量</h1><h3 id="5-1谐波"><a href="#5-1谐波" class="headerlink" title="5.1谐波"></a>5.1谐波</h3><p>谐波产生的根本原因是非线性负载造成电网中的谐波污染、三相电压的不对称性。由于非线性负荷的存在,使得电力系统中的供电电压即便是正弦波形,其电流波形也将偏离正弦波形而发生畸变。</p>
+<h3 id="5-2序分量"><a href="#5-2序分量" class="headerlink" title="5.2序分量"></a>5.2序分量</h3><p>体现了电能质量。</p>
+<h3 id="5-3不平衡度"><a href="#5-3不平衡度" class="headerlink" title="5.3不平衡度"></a>5.3不平衡度</h3><p>引入不平衡度来衡量不对称（简单算法和标准算法）。</p>
+<h3 id="5-4K因子"><a href="#5-4K因子" class="headerlink" title="5.4K因子"></a>5.4K因子</h3><p>为了表现高次谐波比低次谐波危害大，引入K因子。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/07/12/VSC%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="next" title="VSCode连接远程服务器">
+                <i class="fa fa-chevron-left"></i> VSCode连接远程服务器
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/07/31/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%8C%87%E5%8D%97(%E4%BA%8C)/" rel="prev" title="建立个人博客指南(二)">
+                建立个人博客指南(二) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7Carchive">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E7%94%B5%E5%8E%8B%E7%94%B5%E6%B5%81%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="nav-number">1.</span> <span class="nav-text">1.电压电流的计算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1%E7%94%B5%E5%8E%8B%E7%94%B5%E6%B5%81%E6%9C%89%E6%95%88%E5%80%BC%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="nav-number">1.0.1.</span> <span class="nav-text">1.1电压电流有效值的计算</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#a-%E6%A0%B9%E6%8D%AE%E5%AE%9A%E4%B9%89%E8%AE%A1%E7%AE%97"><span class="nav-number">1.0.1.0.0.1.</span> <span class="nav-text">a.根据定义计算</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#b-%E7%BA%BF%E7%94%B5%E5%8E%8B%E7%9A%84%E8%AE%A1%E7%AE%97%EF%BC%9A"><span class="nav-number">1.0.1.0.0.2.</span> <span class="nav-text">b.线电压的计算：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#c-%E8%AE%A1%E7%AE%97%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%9C%80%E8%A6%81%E8%80%83%E8%99%91%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9A"><span class="nav-number">1.0.1.0.0.3.</span> <span class="nav-text">c.计算过程中需要考虑的问题：</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E5%8A%9F%E7%8E%87%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="nav-number">2.</span> <span class="nav-text">2.功率的计算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1%E6%9C%89%E5%8A%9F%E5%8A%9F%E7%8E%87%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="nav-number">2.0.1.</span> <span class="nav-text">2.1有功功率的计算</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#a-%E5%AE%8F%E8%A7%82%E8%AE%A1%E7%AE%97"><span class="nav-number">2.0.1.0.0.1.</span> <span class="nav-text">a.宏观计算</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#b-%E5%BE%AE%E8%A7%82%E8%AE%A1%E7%AE%97"><span class="nav-number">2.0.1.0.0.2.</span> <span class="nav-text">b.微观计算</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2%E6%97%A0%E5%8A%9F%E5%8A%9F%E7%8E%87%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="nav-number">2.0.2.</span> <span class="nav-text">2.2无功功率的计算</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#a-%E5%AE%9A%E4%B9%89%E8%AE%A1%E7%AE%97%EF%BC%9A"><span class="nav-number">2.0.2.0.0.1.</span> <span class="nav-text">a.定义计算：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#b-%E9%97%B4%E6%8E%A5%E8%AE%A1%E7%AE%97%EF%BC%9A"><span class="nav-number">2.0.2.0.0.2.</span> <span class="nav-text">b.间接计算：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#c-%E8%AE%A1%E7%AE%97%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%9C%80%E8%A6%81%E8%80%83%E8%99%91%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9A-1"><span class="nav-number">2.0.2.0.0.3.</span> <span class="nav-text">c.计算过程中需要考虑的问题：</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3%E8%A7%86%E5%9C%A8%E5%8A%9F%E7%8E%87%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="nav-number">2.0.3.</span> <span class="nav-text">2.3视在功率的计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4%E4%B8%89%E7%A7%8D%E5%8A%9F%E7%8E%87%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">2.0.4.</span> <span class="nav-text">2.4三种功率的关系</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2-4-1%E5%8A%9F%E7%8E%87%E5%9B%A0%E6%95%B0"><span class="nav-number">2.0.4.0.0.1.</span> <span class="nav-text">2.4.1功率因数</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E9%A2%91%E7%8E%87%E7%9A%84%E6%B5%8B%E9%87%8F"><span class="nav-number">3.</span> <span class="nav-text">3.频率的测量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1%E7%A1%AC%E4%BB%B6%E6%B5%8B%E9%A2%91"><span class="nav-number">3.0.1.</span> <span class="nav-text">3.1硬件测频</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2%E8%BD%AF%E4%BB%B6%E6%B5%8B%E9%A2%91"><span class="nav-number">3.0.2.</span> <span class="nav-text">3.2软件测频</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E6%A0%A1%E5%87%86%E4%B8%8E%E8%A1%A5%E5%81%BF"><span class="nav-number">4.</span> <span class="nav-text">4.校准与补偿</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1%E5%88%86%E6%AE%B5%E6%A0%A1%E5%87%86"><span class="nav-number">4.0.1.</span> <span class="nav-text">4.1分段校准</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-%E7%94%B5%E8%83%BD%E8%B4%A8%E9%87%8F"><span class="nav-number">5.</span> <span class="nav-text">5.电能质量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1%E8%B0%90%E6%B3%A2"><span class="nav-number">5.0.1.</span> <span class="nav-text">5.1谐波</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2%E5%BA%8F%E5%88%86%E9%87%8F"><span class="nav-number">5.0.2.</span> <span class="nav-text">5.2序分量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3%E4%B8%8D%E5%B9%B3%E8%A1%A1%E5%BA%A6"><span class="nav-number">5.0.3.</span> <span class="nav-text">5.3不平衡度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4K%E5%9B%A0%E5%AD%90"><span class="nav-number">5.0.4.</span> <span class="nav-text">5.4K因子</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">曼路君</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

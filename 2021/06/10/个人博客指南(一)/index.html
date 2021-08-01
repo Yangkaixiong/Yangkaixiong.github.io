@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="如果你想建立一个个人博客，那就来看看这篇文章吧！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="建立个人博客指南(一)">
+<meta property="og:url" content="http://example.com/2021/06/10/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%8C%87%E5%8D%97(%E4%B8%80)/index.html">
+<meta property="og:site_name" content="曼路君的BLOG">
+<meta property="og:description" content="如果你想建立一个个人博客，那就来看看这篇文章吧！">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/06/08/G5hEFYjfpBwtqSa.jpg">
+<meta property="article:published_time" content="2021-06-09T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-07-31T14:20:48.437Z">
+<meta property="article:author" content="曼路君">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/06/08/G5hEFYjfpBwtqSa.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":6},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/2021/06/10/个人博客指南(一)/"/>
+
+
+
+
+
+  <title>建立个人博客指南(一) | 曼路君的BLOG</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">曼路君的BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">积懒成笨，自律使人自由。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            Schedule
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/10/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%8C%87%E5%8D%97(%E4%B8%80)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="曼路君的BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">建立个人博客指南(一)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-06-10T00:00:00+08:00">
+                2021-06-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AE%9E%E8%B7%B5%E7%BB%8F%E9%AA%8C/" itemprop="url" rel="index">
+                    <span itemprop="name">实践经验</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AE%9E%E8%B7%B5%E7%BB%8F%E9%AA%8C/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  如果你想建立一个个人博客，那就来看看这篇文章吧！
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="1-需求分析"><a href="#1-需求分析" class="headerlink" title="1.需求分析"></a>1.需求分析</h1><p>这一部分主要是对为什么要进行个人博客部署进行分析，从功能需求和性能需求两方面来进行。</p>
+<h3 id="1-1-功能需求"><a href="#1-1-功能需求" class="headerlink" title="1.1 功能需求"></a>1.1 功能需求</h3><ul>
+<li>避免重复性劳动：在学习和工作过程中，我们经常遇到一些这样或那样的问题，此时我们可能会在网上找到相应的解决方法。但是过了一段时间之后，当我们再次碰到类似的问题时，早已忘记以前是怎么解决的了，于是又要到网上去搜，浪费大量的时间和精力。</li>
+<li>随时随地可查。</li>
+<li>归纳总结：通过记录解决问题的过程，对问题进行复盘。</li>
+<li>进一步加深学习的程度：学习的过程就是先学习再实践，再学习，再实践的过程，而向别人讲清楚你所学的知识就是实践方法之一。</li>
+</ul>
+<h3 id="1-2-性能需求"><a href="#1-2-性能需求" class="headerlink" title="1.2 性能需求"></a>1.2 性能需求</h3><ul>
+<li>方便撰写和发布：既可以在手机上，也可以在电脑上撰写。</li>
+<li>安全性好。</li>
+</ul>
+<h1 id="2-现状分析"><a href="#2-现状分析" class="headerlink" title="2.现状分析"></a>2.现状分析</h1><p>目前，主流的博客主要分静态博客和动态博客两类：所谓动态，就是指有前端有后端，可以登录到后台进行管理。静态博客是纯前端的展示，没有后端。</p>
+<h3 id="2-1-动态博客"><a href="#2-1-动态博客" class="headerlink" title="2.1 动态博客"></a>2.1 动态博客</h3><p>CSDN、知乎等公共平台：</p>
+<ul>
+<li>优点：会打字就行、阅读量高。</li>
+<li>缺点：限制多。</li>
+</ul>
+<p>WordPress等框架：</p>
+<ul>
+<li>优点：限制少、定制感强。</li>
+<li>缺点：笨重、有点门槛。</li>
+</ul>
+<p>使用Python等自己开发：</p>
+<ul>
+<li>优点：功能强大、获得极大成就感。</li>
+<li>缺点：门槛高。</li>
+</ul>
+<h3 id="2-2-静态博客"><a href="#2-2-静态博客" class="headerlink" title="2.2 静态博客"></a>2.2 静态博客</h3><p>使用hexo、hugo、jekyll等框架 + github page：</p>
+<ul>
+<li>优点：易上手、免费。</li>
+<li>缺点：访问慢。</li>
+</ul>
+<p>使用hexo、hugo、jekyll等框架 +云服务器：</p>
+<ul>
+<li>优点：访问速度快。</li>
+<li>缺点：要花点money。</li>
+</ul>
+<h3 id="2-3-总结"><a href="#2-3-总结" class="headerlink" title="2.3 总结"></a>2.3 总结</h3><p>经过以上的分析，本文选用两种方式部署，一种是hexo + 腾讯云服务器，一种是hexo + github page。</p>
+<h1 id="3-hexo-腾讯云服务器部署实现"><a href="#3-hexo-腾讯云服务器部署实现" class="headerlink" title="3.hexo+腾讯云服务器部署实现"></a>3.hexo+腾讯云服务器部署实现</h1><h3 id="3-1-总体设计"><a href="#3-1-总体设计" class="headerlink" title="3.1 总体设计"></a>3.1 总体设计</h3><p>该方法部署主要分为三个部分：本地hexo部分、git部分、云服务器部分。工作原理如图3.1所示。</p>
+<p><img src="https://i.loli.net/2021/06/08/G5hEFYjfpBwtqSa.jpg" alt="preview"></p>
+<p>​                     图3.1</p>
+<p>简单来说就是在本地计算机搭建Hexo环境，Hexo通过generate命令将.md文件渲染成静态的html页面，然后Hexo通过deploy命令触发git用户通过公钥免密登陆服务器，进而将静态页面推送到服务器的git仓库（repository）中。然后，服务器再通过钩子（git-hooks） 将静态页面checkout到网站的根目录下，进而实现博客的自动部署。具体过程如图中实线箭头所示。</p>
+<h2 id="3-2-hexo搭建"><a href="#3-2-hexo搭建" class="headerlink" title="3.2 hexo搭建"></a>3.2 hexo搭建</h2><p>所需知识：<a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">什么是hexo</a>、<a target="_blank" rel="noopener" href="https://blog.csdn.net/Georgean2013/article/details/81318392">hexo原理浅析</a>什么是Node.js、<a target="_blank" rel="noopener" href="https://backlog.com/git-tutorial/cn/reference/"> 猴子都能懂的GIT入门</a>、<a href="">Linux常见命令</a>、<a target="_blank" rel="noopener" href="https://www.cnblogs.com/qlqwjy/p/7787156.html">Linux命令参数介绍</a>、<a target="_blank" rel="noopener" href="http://c.biancheng.net/view/804.html">Vim的使用</a>、<a target="_blank" rel="noopener" href="https://rogchen.github.io/2019/09/16/hexo-more/">hexo首页只显示部分</a></p>
+<h6 id="a-安装Node-js"><a href="#a-安装Node-js" class="headerlink" title="a. 安装Node.js"></a>a. 安装Node.js</h6><h6 id="b-安装hexo并建立文件夹"><a href="#b-安装hexo并建立文件夹" class="headerlink" title="b. 安装hexo并建立文件夹"></a>b. 安装hexo并建立文件夹</h6><ul>
+<li>npm安装hexo。</li>
+<li>建立一个文件夹用来存放个人博客，并对其初始化。</li>
+<li>启动hexo服务。</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<h6 id="c-设置hexo站点配置文件"><a href="#c-设置hexo站点配置文件" class="headerlink" title="c. 设置hexo站点配置文件"></a>c. 设置hexo站点配置文件</h6><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: root@xx.xx.xx.xx:/home/git/hexoBlog.git  <span class="comment">//xx.xx.xx.xx为服务器地址</span></span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<h6 id="e-在hexo目录下执行部署"><a href="#e-在hexo目录下执行部署" class="headerlink" title="e. 在hexo目录下执行部署"></a>e. 在hexo目录下执行部署</h6><h6 id="f-测试是否部署成功"><a href="#f-测试是否部署成功" class="headerlink" title="f. 测试是否部署成功"></a>f. 测试是否部署成功</h6><h6 id="g-hexo主题布置"><a href="#g-hexo主题布置" class="headerlink" title="g. hexo主题布置"></a>g. hexo主题布置</h6><h3 id="3-3-naginx服务器配置"><a href="#3-3-naginx服务器配置" class="headerlink" title="3.3 naginx服务器配置"></a>3.3 naginx服务器配置</h3><p>所需知识：安全组和防火墙、<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/34943332">深入浅出搞懂Nginx</a>、<a target="_blank" rel="noopener" href="https://www.cnblogs.com/lxwphp/p/11126255.html">wget、yum、rpm、apt-get区别</a>、</p>
+<h6 id="a-安装环境"><a href="#a-安装环境" class="headerlink" title="a. 安装环境"></a>a. 安装环境</h6><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#yum install gcc-c++</span></span><br><span class="line"><span class="meta">#yum install -y pcre pcre-devel</span></span><br><span class="line"><span class="meta">#yum install -y zlib zlib-devel</span></span><br><span class="line"><span class="meta">#yum install -y openssl openssl-devel</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="b-安装nginx"><a href="#b-安装nginx" class="headerlink" title="b. 安装nginx"></a>b. 安装nginx</h6><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#yun install -y nginx  <span class="comment">//本次安装目录/usr/sbin/nginx</span></span></span><br></pre></td></tr></table></figure>
+
+<h6 id="c-启动nginx"><a href="#c-启动nginx" class="headerlink" title="c. 启动nginx"></a>c. 启动nginx</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">service nginx start //第一种方法</span><br><span class="line">cd sbin//第二种方法</span><br><span class="line">./sbin</span><br></pre></td></tr></table></figure>
+
+<h6 id="e-测试网页是否可以打开"><a href="#e-测试网页是否可以打开" class="headerlink" title="e. 测试网页是否可以打开"></a>e. 测试网页是否可以打开</h6><h6 id="f-修改nginx配置文件"><a href="#f-修改nginx配置文件" class="headerlink" title="f. 修改nginx配置文件"></a>f. 修改nginx配置文件</h6><ul>
+<li>专门为hexo创建一个部署目录/home/www/hexo。</li>
+<li>修改Nginx的默认配置，将其中的 root 值改为 <code>/home/hexoBlog</code> （刚才创建的托管仓库目录），将 server_name 值改成自己相应的<code>域名地址</code></li>
+<li>重启 Nginx 服务</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service nginx restart</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-4-本地和云端Git配置"><a href="#3-4-本地和云端Git配置" class="headerlink" title="3.4 本地和云端Git配置"></a>3.4 本地和云端Git配置</h3><p>所需知识：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/1c752ac01fa3">公钥与私钥原理</a>、Git的安装</p>
+<h6 id="a-安装依赖库和编译工具"><a href="#a-安装依赖库和编译工具" class="headerlink" title="a. 安装依赖库和编译工具"></a>a. 安装依赖库和编译工具</h6><ul>
+<li>安装依赖库</li>
+<li>安装编译工具</li>
+</ul>
+<h6 id="b-安装git"><a href="#b-安装git" class="headerlink" title="b. 安装git"></a>b. 安装git</h6><h6 id="c-配置git环境变量"><a href="#c-配置git环境变量" class="headerlink" title="c. 配置git环境变量"></a>c. 配置git环境变量</h6><ul>
+<li>将git加入PATH目录中</li>
+<li>使git环境变量生效</li>
+</ul>
+<h6 id="e-检查是否安装成功"><a href="#e-检查是否安装成功" class="headerlink" title="e. 检查是否安装成功"></a>e. 检查是否安装成功</h6><h6 id="f-创建git仓库，用于存放博客网站资源"><a href="#f-创建git仓库，用于存放博客网站资源" class="headerlink" title="f. 创建git仓库，用于存放博客网站资源"></a>f. 创建git仓库，用于存放博客网站资源</h6><ul>
+<li>在 <code>home/git</code> 的目录下，创建一个名为<code>hexoBlog</code>的文件。<br>  如果没有 <code>home/git</code> 目录，需要先创建；然后修改目录的所有权和用户权限。</li>
+<li>初始化仓库。</li>
+</ul>
+<h6 id="g-创建一个新的-git-钩子，用于自动部署"><a href="#g-创建一个新的-git-钩子，用于自动部署" class="headerlink" title="g. 创建一个新的 git 钩子，用于自动部署"></a>g. 创建一个新的 git 钩子，用于自动部署</h6><ul>
+<li>在 <code>/home/git/hexoBlog.git</code> 下，有一个自动生成的 <code>hooks</code> 文件夹。我们需要在里边新建一个新的钩子文件 <code>post-receive</code></li>
+<li>按 <code>i</code> 键进入文件的编辑模式，在该文件中添加两行代码（将下边的代码粘贴进去)，指定 Git 的工作树（源代码）和 Git 目录（配置文件等）</li>
+<li>修改文件权限，使得其可执行</li>
+</ul>
+<h1 id="4-hexo-github-page部署实现"><a href="#4-hexo-github-page部署实现" class="headerlink" title="4.hexo+github page部署实现"></a>4.hexo+github page部署实现</h1><h3 id="4-1-总体设计"><a href="#4-1-总体设计" class="headerlink" title="4.1 总体设计"></a>4.1 总体设计</h3><p>和3.1基本相似，差别在于服务器由github提供。</p>
+<h3 id="4-2-hexo本地配置"><a href="#4-2-hexo本地配置" class="headerlink" title="4.2 hexo本地配置"></a>4.2 hexo本地配置</h3><p>同3.2部分。</p>
+<h3 id="4-3-github-page配置"><a href="#4-3-github-page配置" class="headerlink" title="4.3 github page配置"></a>4.3 github page配置</h3><p>a. 使用github用户名.github.io为名，新建一个仓库（注意选择initalize with readme）。</p>
+<p>b. 填写github公钥。</p>
+<p>c. 填写page，修改为master分支。</p>
+<h3 id="4-4-本地git配置"><a href="#4-4-本地git配置" class="headerlink" title="4.4 本地git配置"></a>4.4 本地git配置</h3><h1 id="5-问题汇总"><a href="#5-问题汇总" class="headerlink" title="5.问题汇总"></a>5.问题汇总</h1><h6 id="5-1-Unable-to-locate-package-pcre换源update和upgrade："><a href="#5-1-Unable-to-locate-package-pcre换源update和upgrade：" class="headerlink" title="5.1 Unable to locate package pcre换源update和upgrade："></a>5.1 Unable to locate package pcre换源update和upgrade：</h6><ul>
+<li>linux上安装软件分为两种，一种<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36090463/article/details/80646454">软件源</a>，一种是<a target="_blank" rel="noopener" href="https://linux.cn/article-9172-1.html">下载源码</a>然后自己编译。当软件源中没有所需软件时，就会出现上述错误。</li>
+</ul>
+<h6 id="5-2-Nginx启动时提示，emerg-still-could-not-bind"><a href="#5-2-Nginx启动时提示，emerg-still-could-not-bind" class="headerlink" title="5.2 Nginx启动时提示，emerg still could not bind():"></a>5.2 Nginx启动时提示，emerg still could not bind():</h6><ul>
+<li>这是因为端口被占用，可以kill掉nginx进程。</li>
+</ul>
+<h6 id="5-3-访问nginx返回403："><a href="#5-3-访问nginx返回403：" class="headerlink" title="5.3 访问nginx返回403："></a>5.3 访问nginx返回403：</h6><ul>
+<li><p>开了selinux，关闭即可。</p>
+</li>
+<li><p>nginx配置中直接返回了403http状态码。</p>
+</li>
+<li><p>nginx中配置的站点目录内文件没有访问权限。</p>
+</li>
+</ul>
+<h6 id="5-4-使用ssh密钥："><a href="#5-4-使用ssh密钥：" class="headerlink" title="5.4 使用ssh密钥："></a>5.4 使用ssh密钥：</h6><ol>
+<li>本地生成密钥对。</li>
+<li>设置github上的公钥。</li>
+<li>修改git的remote url为git协议。</li>
+</ol>
+<h6 id="5-5-hexo使用theme出现“-extends-‘-layout-swig‘-import-‘-macro-post-swig‘-as-post-template-“问题："><a href="#5-5-hexo使用theme出现“-extends-‘-layout-swig‘-import-‘-macro-post-swig‘-as-post-template-“问题：" class="headerlink" title="5.5 hexo使用theme出现“ % extends ‘_layout.swig‘ % % import ‘_macro/post.swig‘ as post_template %“问题："></a>5.5 hexo使用theme出现“ % extends ‘_layout.swig‘ % % import ‘_macro/post.swig‘ as post_template %“问题：</h6><ul>
+<li>原因是hexo在5.0之后把swig给删除了需要自己手动安装。</li>
+</ul>
+<h6 id="5-6-hexo-generate时err-template-render-unknown-path："><a href="#5-6-hexo-generate时err-template-render-unknown-path：" class="headerlink" title="5.6 hexo generate时err: template render unknown path："></a>5.6 hexo generate时err: template render unknown path：</h6><ul>
+<li>配置文件有空格。</li>
+<li>出现了花括号。</li>
+<li>代码没用代码格式。</li>
+</ul>
+<h6 id="5-7-103-x69-116-x40-x31-46-49-49-55-x2e-50-x31-x36-46-52-home-git-hexo-git和hexo的区别："><a href="#5-7-103-x69-116-x40-x31-46-49-49-55-x2e-50-x31-x36-46-52-home-git-hexo-git和hexo的区别：" class="headerlink" title="5.7 &#103;&#x69;&#116;&#x40;&#x31;&#46;&#49;&#49;&#55;&#x2e;&#50;&#x31;&#x36;&#46;&#52;:/home/git/hexo.git和hexo的区别："></a>5.7 <a href="mailto:&#103;&#x69;&#116;&#x40;&#x31;&#46;&#49;&#49;&#55;&#x2e;&#50;&#x31;&#x36;&#46;&#52;">&#103;&#x69;&#116;&#x40;&#x31;&#46;&#49;&#49;&#55;&#x2e;&#50;&#x31;&#x36;&#46;&#52;</a>:/home/git/hexo.git和hexo的区别：</h6><h6 id="5-8-su-Authentication-failure"><a href="#5-8-su-Authentication-failure" class="headerlink" title="5.8 su: Authentication failure"></a>5.8 su: Authentication failure</h6><p>su命令不能切换root，提示su: Authentication failure，只要你sudo passwd root过一次之后，下次再su的时候只要输入密码就可以成功登录了</p>
+<h6 id="5-9-本地git需要密码："><a href="#5-9-本地git需要密码：" class="headerlink" title="5.9 本地git需要密码："></a>5.9 本地git需要密码：</h6><p>在云服务器查看<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/cd9e348b2c48">相关用户信息</a></p>
+<h6 id="5-10-查看是否安装软件："><a href="#5-10-查看是否安装软件：" class="headerlink" title="5.10 查看是否安装软件："></a>5.10 查看是否安装软件：</h6><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa |grep openssl</span><br></pre></td></tr></table></figure>
+
+<h6 id="5-11-软件管理包和源码安装时软件安装在哪里："><a href="#5-11-软件管理包和源码安装时软件安装在哪里：" class="headerlink" title="5.11 软件管理包和源码安装时软件安装在哪里："></a>5.11 软件管理包和源码安装时软件安装在哪里：</h6><p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/278791236">在哪个目录下使用wget</a>，<a target="_blank" rel="noopener" href="https://blog.csdn.net/amaoatao/article/details/80997872">压缩包</a>就在那里，解压和安装都去解压缩的目录下。</p>
+<h6 id="5-12-访问时出现403、err-connection-refused："><a href="#5-12-访问时出现403、err-connection-refused：" class="headerlink" title="5.12 访问时出现403、err_connection_refused："></a>5.12 访问时出现403、err_connection_refused：</h6><ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/u012140251/article/details/89603759">开放特定端口</a>。</li>
+<li>查看error_log文件。</li>
+<li>运行软件，开启端口。</li>
+</ul>
+<h6 id="5-13-git-github-Permission-denied-publickey-，Could-not-read-from-remote-repository："><a href="#5-13-git-github-Permission-denied-publickey-，Could-not-read-from-remote-repository：" class="headerlink" title="5.13 git@github Permission denied (publickey)，Could not read from remote repository："></a>5.13 git@github Permission denied (publickey)，Could not read from remote repository：</h6><p>先删除.ssh文件夹内的内容，再重新生成ssh key，然后将以isa开头的密钥复制到github，最后将分支设置成<code>master</code>。</p>
+<ol>
+<li><p>Open Git Bash.</p>
+</li>
+<li><p>Paste the text below, substituting in your GitHub email address.</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span></span></span><br></pre></td></tr></table></figure>
+
+<p> <strong>Note:</strong> If you are using a legacy system that doesn’t support the Ed25519 algorithm, use:</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ssh-keygen -t rsa -b 4096 -C <span class="string">&quot;your_email@example.com&quot;</span></span></span><br></pre></td></tr></table></figure>
+
+<p> This creates a new ssh key, using the provided email as a label.</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash"> Generating public/private ed25519 key pair.</span></span><br></pre></td></tr></table></figure></li>
+<li><p>When you’re prompted to “Enter a file in which to save the key,” press Enter. This accepts the default file location.</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash"> Enter a file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/c/Users/you/.ssh/id_ed25519):[Press enter]</span></span><br></pre></td></tr></table></figure></li>
+<li><p>At the prompt, type a secure passphrase. </p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash"> Enter passphrase (empty <span class="keyword">for</span> no passphrase): [Type a passphrase]</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Enter same passphrase again: [Type passphrase again]</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>5.将isa添加到github，并设置master.</p>
+<p>6.检测是否设置成功。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<p>如果成功，会出现以下文字：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hi username! You&#x27;ve successfully authenticated, but GitHub does not</span><br><span class="line">provide shell access.</span><br></pre></td></tr></table></figure>
+
+<h1 id="6-文章小结"><a href="#6-文章小结" class="headerlink" title="6.文章小结"></a>6.文章小结</h1><ol>
+<li><p>在采用别人的经验技巧时，一定要明确别人的环境，对于本文的部署博客，尽量保持和我的环境一致，不然容易出问题，如果是小白的话解决起来相当麻烦。</p>
+</li>
+<li><p>在搭建个人博客前最好先有一个结构型的思维，知道部署博客分为三部分，然后逐一攻破。</p>
+</li>
+<li><p>在做事的过程中记录好步骤有利于出问题时的回溯检查，尽可能搞懂每一步，不然出错都不知道哪里出错。</p>
+</li>
+<li><p>再难的问题也敌不过理性地分析。</p>
+</li>
+<li><p>最开始搜集资料的时候，必须要找到最原始的资料，这样可以避免很多弯路。比如找到<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">文档 | Hexo</a>。</p>
+</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/06/11/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/" rel="prev" title="时间管理二三事">
+                时间管理二三事 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7Carchive">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90"><span class="nav-number">1.</span> <span class="nav-text">1.需求分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E5%8A%9F%E8%83%BD%E9%9C%80%E6%B1%82"><span class="nav-number">1.0.1.</span> <span class="nav-text">1.1 功能需求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E6%80%A7%E8%83%BD%E9%9C%80%E6%B1%82"><span class="nav-number">1.0.2.</span> <span class="nav-text">1.2 性能需求</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E7%8E%B0%E7%8A%B6%E5%88%86%E6%9E%90"><span class="nav-number">2.</span> <span class="nav-text">2.现状分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E5%8A%A8%E6%80%81%E5%8D%9A%E5%AE%A2"><span class="nav-number">2.0.1.</span> <span class="nav-text">2.1 动态博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2"><span class="nav-number">2.0.2.</span> <span class="nav-text">2.2 静态博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E6%80%BB%E7%BB%93"><span class="nav-number">2.0.3.</span> <span class="nav-text">2.3 总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-hexo-%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2%E5%AE%9E%E7%8E%B0"><span class="nav-number">3.</span> <span class="nav-text">3.hexo+腾讯云服务器部署实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E6%80%BB%E4%BD%93%E8%AE%BE%E8%AE%A1"><span class="nav-number">3.0.1.</span> <span class="nav-text">3.1 总体设计</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-hexo%E6%90%AD%E5%BB%BA"><span class="nav-number">3.1.</span> <span class="nav-text">3.2 hexo搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#a-%E5%AE%89%E8%A3%85Node-js"><span class="nav-number">3.1.0.0.0.1.</span> <span class="nav-text">a. 安装Node.js</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#b-%E5%AE%89%E8%A3%85hexo%E5%B9%B6%E5%BB%BA%E7%AB%8B%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">3.1.0.0.0.2.</span> <span class="nav-text">b. 安装hexo并建立文件夹</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#c-%E8%AE%BE%E7%BD%AEhexo%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">3.1.0.0.0.3.</span> <span class="nav-text">c. 设置hexo站点配置文件</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#e-%E5%9C%A8hexo%E7%9B%AE%E5%BD%95%E4%B8%8B%E6%89%A7%E8%A1%8C%E9%83%A8%E7%BD%B2"><span class="nav-number">3.1.0.0.0.4.</span> <span class="nav-text">e. 在hexo目录下执行部署</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#f-%E6%B5%8B%E8%AF%95%E6%98%AF%E5%90%A6%E9%83%A8%E7%BD%B2%E6%88%90%E5%8A%9F"><span class="nav-number">3.1.0.0.0.5.</span> <span class="nav-text">f. 测试是否部署成功</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#g-hexo%E4%B8%BB%E9%A2%98%E5%B8%83%E7%BD%AE"><span class="nav-number">3.1.0.0.0.6.</span> <span class="nav-text">g. hexo主题布置</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-naginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE"><span class="nav-number">3.1.1.</span> <span class="nav-text">3.3 naginx服务器配置</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#a-%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83"><span class="nav-number">3.1.1.0.0.1.</span> <span class="nav-text">a. 安装环境</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#b-%E5%AE%89%E8%A3%85nginx"><span class="nav-number">3.1.1.0.0.2.</span> <span class="nav-text">b. 安装nginx</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#c-%E5%90%AF%E5%8A%A8nginx"><span class="nav-number">3.1.1.0.0.3.</span> <span class="nav-text">c. 启动nginx</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#e-%E6%B5%8B%E8%AF%95%E7%BD%91%E9%A1%B5%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E6%89%93%E5%BC%80"><span class="nav-number">3.1.1.0.0.4.</span> <span class="nav-text">e. 测试网页是否可以打开</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#f-%E4%BF%AE%E6%94%B9nginx%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">3.1.1.0.0.5.</span> <span class="nav-text">f. 修改nginx配置文件</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-%E6%9C%AC%E5%9C%B0%E5%92%8C%E4%BA%91%E7%AB%AFGit%E9%85%8D%E7%BD%AE"><span class="nav-number">3.1.2.</span> <span class="nav-text">3.4 本地和云端Git配置</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#a-%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E5%BA%93%E5%92%8C%E7%BC%96%E8%AF%91%E5%B7%A5%E5%85%B7"><span class="nav-number">3.1.2.0.0.1.</span> <span class="nav-text">a. 安装依赖库和编译工具</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#b-%E5%AE%89%E8%A3%85git"><span class="nav-number">3.1.2.0.0.2.</span> <span class="nav-text">b. 安装git</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#c-%E9%85%8D%E7%BD%AEgit%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">3.1.2.0.0.3.</span> <span class="nav-text">c. 配置git环境变量</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#e-%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F"><span class="nav-number">3.1.2.0.0.4.</span> <span class="nav-text">e. 检查是否安装成功</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#f-%E5%88%9B%E5%BB%BAgit%E4%BB%93%E5%BA%93%EF%BC%8C%E7%94%A8%E4%BA%8E%E5%AD%98%E6%94%BE%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E8%B5%84%E6%BA%90"><span class="nav-number">3.1.2.0.0.5.</span> <span class="nav-text">f. 创建git仓库，用于存放博客网站资源</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#g-%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%B0%E7%9A%84-git-%E9%92%A9%E5%AD%90%EF%BC%8C%E7%94%A8%E4%BA%8E%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2"><span class="nav-number">3.1.2.0.0.6.</span> <span class="nav-text">g. 创建一个新的 git 钩子，用于自动部署</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-hexo-github-page%E9%83%A8%E7%BD%B2%E5%AE%9E%E7%8E%B0"><span class="nav-number">4.</span> <span class="nav-text">4.hexo+github page部署实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-%E6%80%BB%E4%BD%93%E8%AE%BE%E8%AE%A1"><span class="nav-number">4.0.1.</span> <span class="nav-text">4.1 总体设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-hexo%E6%9C%AC%E5%9C%B0%E9%85%8D%E7%BD%AE"><span class="nav-number">4.0.2.</span> <span class="nav-text">4.2 hexo本地配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-github-page%E9%85%8D%E7%BD%AE"><span class="nav-number">4.0.3.</span> <span class="nav-text">4.3 github page配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-%E6%9C%AC%E5%9C%B0git%E9%85%8D%E7%BD%AE"><span class="nav-number">4.0.4.</span> <span class="nav-text">4.4 本地git配置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB"><span class="nav-number">5.</span> <span class="nav-text">5.问题汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#5-1-Unable-to-locate-package-pcre%E6%8D%A2%E6%BA%90update%E5%92%8Cupgrade%EF%BC%9A"><span class="nav-number">5.0.0.0.0.1.</span> <span class="nav-text">5.1 Unable to locate package pcre换源update和upgrade：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-2-Nginx%E5%90%AF%E5%8A%A8%E6%97%B6%E6%8F%90%E7%A4%BA%EF%BC%8Cemerg-still-could-not-bind"><span class="nav-number">5.0.0.0.0.2.</span> <span class="nav-text">5.2 Nginx启动时提示，emerg still could not bind():</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-3-%E8%AE%BF%E9%97%AEnginx%E8%BF%94%E5%9B%9E403%EF%BC%9A"><span class="nav-number">5.0.0.0.0.3.</span> <span class="nav-text">5.3 访问nginx返回403：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-4-%E4%BD%BF%E7%94%A8ssh%E5%AF%86%E9%92%A5%EF%BC%9A"><span class="nav-number">5.0.0.0.0.4.</span> <span class="nav-text">5.4 使用ssh密钥：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-5-hexo%E4%BD%BF%E7%94%A8theme%E5%87%BA%E7%8E%B0%E2%80%9C-extends-%E2%80%98-layout-swig%E2%80%98-import-%E2%80%98-macro-post-swig%E2%80%98-as-post-template-%E2%80%9C%E9%97%AE%E9%A2%98%EF%BC%9A"><span class="nav-number">5.0.0.0.0.5.</span> <span class="nav-text">5.5 hexo使用theme出现“ % extends ‘_layout.swig‘ % % import ‘_macro&#x2F;post.swig‘ as post_template %“问题：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-6-hexo-generate%E6%97%B6err-template-render-unknown-path%EF%BC%9A"><span class="nav-number">5.0.0.0.0.6.</span> <span class="nav-text">5.6 hexo generate时err: template render unknown path：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-7-103-x69-116-x40-x31-46-49-49-55-x2e-50-x31-x36-46-52-home-git-hexo-git%E5%92%8Chexo%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="nav-number">5.0.0.0.0.7.</span> <span class="nav-text">5.7 git@1.117.216.4:&#x2F;home&#x2F;git&#x2F;hexo.git和hexo的区别：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-8-su-Authentication-failure"><span class="nav-number">5.0.0.0.0.8.</span> <span class="nav-text">5.8 su: Authentication failure</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-9-%E6%9C%AC%E5%9C%B0git%E9%9C%80%E8%A6%81%E5%AF%86%E7%A0%81%EF%BC%9A"><span class="nav-number">5.0.0.0.0.9.</span> <span class="nav-text">5.9 本地git需要密码：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-10-%E6%9F%A5%E7%9C%8B%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6%EF%BC%9A"><span class="nav-number">5.0.0.0.0.10.</span> <span class="nav-text">5.10 查看是否安装软件：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-11-%E8%BD%AF%E4%BB%B6%E7%AE%A1%E7%90%86%E5%8C%85%E5%92%8C%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85%E6%97%B6%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%9A"><span class="nav-number">5.0.0.0.0.11.</span> <span class="nav-text">5.11 软件管理包和源码安装时软件安装在哪里：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-12-%E8%AE%BF%E9%97%AE%E6%97%B6%E5%87%BA%E7%8E%B0403%E3%80%81err-connection-refused%EF%BC%9A"><span class="nav-number">5.0.0.0.0.12.</span> <span class="nav-text">5.12 访问时出现403、err_connection_refused：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-13-git-github-Permission-denied-publickey-%EF%BC%8CCould-not-read-from-remote-repository%EF%BC%9A"><span class="nav-number">5.0.0.0.0.13.</span> <span class="nav-text">5.13 git@github Permission denied (publickey)，Could not read from remote repository：</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-%E6%96%87%E7%AB%A0%E5%B0%8F%E7%BB%93"><span class="nav-number">6.</span> <span class="nav-text">6.文章小结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">曼路君</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
